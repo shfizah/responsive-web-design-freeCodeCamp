@@ -1,0 +1,197 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <h1 id="title">AI Tools Survey Form</h1>
+   
+    <p id="description">The purpose of this form is to collect data about AI tools used in daily life. Thank you for your time and cooperation.</p>
+   
+    <form id="survey-form"><!-- method="post" action='https://register-demo.freecodecamp.org'-->
+
+      <fieldset>
+        <label id="name-label">
+        <label for="name">Enter Your Name: <input id="name" type="text" placeholder="Ali Bin Abu" required /></label>
+        </label>
+
+        <label id="email-label">
+        <label for="email">Enter Your Email: <input id="email" name="email" type="email" placeholder="ali12@gmail.com" required /></label>
+        </label>
+
+        <label id="number-label">
+        <label for="number">Enter your age (years): <input id="number" type="number" name="age" min="10" max="120" placeholder="e.g: 12" required/></label>
+        <label for="number">Enter your phone number: <input type="tel" id="number" name="phone" pattern="[0-9]{3}-[0-9]{3}[0-9]{4}" placeholder="Format: 012-4567890" required />
+</label>
+</label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Gender (required)</legend>
+        <label for="gender"><input id="gender" type="radio" name="gender" class="inline" value="-" checked/> Prefer not to tell</label>
+        <label for="gender-female"><input id="gender-female" type="radio" name="gender" class="inline" value="female"/> Female</label>
+        <label for="gender-male"><input id="gender-male" type="radio" name="gender" value="male" class="inline" /> Male</label>  
+      </fieldset>
+
+      <fieldset>
+        <legend>Section A</legend>
+        <label>How often do you use AI tools in your daily life?</label>
+        <label for="frequency-often"><input id="frequency-often" type="radio" name="frequency" class="inline" value="often" checked /> Very often</label>
+        <label for="frequency-sometimes"><input id="frequency-sometimes" type="radio" name="frequency" value="sometimes" class="inline" /> Sometimes</label>
+        <label for="frequency-rarely"><input id="frequency-rarely" type="radio" value="rarely" name="frequency" class="inline" /> Rarely</label>
+        <label for="frequency-never"><input id="frequency-never" type="radio" name="frequency" value="never" class="inline" /> Never</label>
+
+        <fieldset>For what purpose you often use AI
+           <label for="purpose"><input id="purpose" type="radio" name="purpose" class="inline" value="school" checked /> School</label>
+        <label for="purpose-work"><input id="purpose-work" type="radio" name="purpose" class="inline" value="work"/> Work</label>
+        <label for="purpose-personal"><input id="purpose-personal" type="radio" name="purpose" class="inline" value="personal"/> Personal Matter</label>
+        <label for="purpose-other"><input id="purpose-other" type="radio" name="purpose" class="inline" value="others"/> Others</label>    
+        <label>If you choose 'Others', please specify what it is
+          <input id="other" type="text" placeholder="e.g  Social media"/></label>
+       </fieldset>  
+       </fieldset>
+
+         <fieldset>
+           <legend>Section B</legend>
+
+        <label for="dropdown">What is your current role?
+          <select id="dropdown" name="role">
+            <option value="">(select one)</option>
+            <option value="1">Student</option>
+            <option value="2">Educators</option>
+            <option value="3">Full Time Job </option>
+            <option value="4">Freelance</option>
+            <option value="5">Prefer not to tell</option>
+            <option value="6">Other</option>
+          </select>
+        </label>
+<fieldset>Which AI have you used or similar with?
+        <label for="Ai1">
+        <input class="inline" id="Ai1" value="A1" type="checkbox" name="Ai" />Grammarly</label>
+        <label for="Ai2">
+        <input class="inline" id="Ai2" value="A2" type="checkbox" name="Ai" />ChatGPT</label>
+        <label for="Ai3">
+        <input class="inline" id="Ai3" value="A3" type="checkbox" name="Ai" />ChatPDF</label>
+        <label for="Ai4">
+        <input class="inline" id="Ai4" value="A4" type="checkbox" name="Ai" />BlackBox AI</label>
+        <label for="Ai5">
+        <input class="inline" id="Ai5" value="A5" type="checkbox" name="Ai" />Quillbot</label>
+        <label for="Ai6">
+        <input class="inline" id="Ai6" value="A6" type="checkbox" name="Ai" />JotBot AI</label>
+        <label for="Ai7">
+        <input class="inline" id="Ai7" value="A7" type="checkbox" name="Ai" />Other</label>
+        </fieldset>
+      
+
+        <label for="comment">Any comments or recommmendations?
+          <textarea id="comment" name="comment" rows="5" cols="30" placeholder="I recommend..."></textarea>
+        </label>
+      <input type="submit" id="submit" value="Submit" />
+    </form>
+  </body>
+</html>
+
+<style>
+body {
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  background-image:url(https://wallpapercave.com/wp/wp5587842.jpg);
+  color: #DADADA;
+  font-family: Tahoma;
+  font-size: 16px;
+}
+
+h1, p {
+  margin: 1em auto;
+  text-align: center;
+}
+
+form {
+background-color: rgb(46,48,51,0.7);
+  width: 400px;
+  max-width: 500px;
+  min-width: 300px;
+  margin: 0 auto;
+  padding-bottom:2%;
+  padding-top:2%;
+  padding-left: 10%;
+  padding-right: 10%;
+  
+}
+
+fieldset {
+  border: none;
+  padding: 1rem 0;
+  border-top: 3px solid #a9a9a9;
+}
+
+fieldset:last-of-type {
+  border-bottom: none;
+}
+
+fieldset:first-of-type {
+  border-top: none;
+}
+
+label {
+  display: block;
+  margin: 0.5rem 0;
+}
+
+input,
+textarea,
+select {
+  margin: 10px 0 0 0;
+  width: 100%;
+  min-height: 2em;
+  font-family: Arial;
+  font-size: 14px;
+}
+
+input, textarea {
+  background-color: #0a0a23;
+  border: 1px solid #0a0a23;
+  color: #ffffff;
+}
+
+.inline {
+  width: unset;
+  margin: 0 0.5em 0 0;
+  vertical-align: middle;
+}
+
+input[type="submit"] {
+  display: block;
+  width: 60%;
+  margin: 1em auto;
+  height: 2em;
+  font-size: 1.1rem;
+  background-color: #3b3b4f;
+  border-color: white;
+  min-width: 300px;
+}
+
+.inline{
+  display: inline; 
+}
+
+  #submit {
+    background-color: #4CAF50; /* set the background color to green */
+    color: white; /* set the text color to white */
+    padding: 10px 20px; /* set the padding to 10px on the top and bottom, and 20px on the left and right */
+    border: none; /* remove the border */
+    border-radius: 5px; /* add rounded corners */
+    cursor: pointer; /* add a pointer cursor when hovering over the button */
+  }
+
+  #submit:hover {
+    background-color: #3e8e41; /* set the background color to a darker green on hover */
+  }
+
+</style>
